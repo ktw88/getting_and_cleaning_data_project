@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>Code Book</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>Code Book</h1>
+
+<h1>Subject and Activities</h1>
+
+<ul>
+<li>Subject.ID
+
+<ul>
+<li>Takes a range of values between 1-30 (30 subjects in total)</li>
+</ul></li>
+<li>Activity
+
+<ul>
+<li>LAYING</li>
+<li>SITTING</li>
+<li>STANDING</li>
+<li>WALKING</li>
+<li>WALKING_DOWNSTAIRS</li>
+<li>WALKING_UPSTAIRS</li>
+</ul></li>
+</ul>
+
+<h1>Mean of Measurement values</h1>
+
+<p>The mean of a series of variables corresponding to each subject and
+each subject activity were calulated based on the original aggregated
+data. </p>
+
+<p>Some variables would also have a X,Y,Z term to indicate information for
+each of the three dimensions. The terms may also have a term mean() to indicate that it is the mean of the raw data and std() to indicate that it is
+the standard deviation.</p>
+
+<p>All the variables have a suffix of &ldquo;.Subject.Activity.mean&rdquo; to indicate that
+there are calculated means of the corresponding variable for each subject and each activity.</p>
+
+<ul>
+<li><p>Total Body Acceleration</p>
+
+<ul>
+<li>tBodyAcc-mean()-X.Subject.Activity.mean</li>
+<li>tBodyAcc-mean()-Y.Subject.Activity.mean</li>
+<li>tBodyAcc-mean()-Z.Subject.Activity.mean</li>
+<li>tBodyAcc-std()-X.Subject.Activity.mean</li>
+<li>tBodyAcc-std()-Y.Subject.Activity.mean</li>
+<li>tBodyAcc-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Gravity Acceleration</p>
+
+<ul>
+<li>tGravityAcc-mean()-X.Subject.Activity.mean</li>
+<li>tGravityAcc-mean()-Y.Subject.Activity.mean</li>
+<li>tGravityAcc-mean()-Z.Subject.Activity.mean</li>
+<li>tGravityAcc-std()-X.Subject.Activity.mean</li>
+<li>tGravityAcc-std()-Y.Subject.Activity.mean</li>
+<li>tGravityAcc-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Acceleration Jerk</p>
+
+<ul>
+<li>tBodyAccJerk-mean()-X.Subject.Activity.mean</li>
+<li>tBodyAccJerk-mean()-Y.Subject.Activity.mean</li>
+<li>tBodyAccJerk-mean()-Z.Subject.Activity.mean</li>
+<li>tBodyAccJerk-std()-X.Subject.Activity.mean</li>
+<li>tBodyAccJerk-std()-Y.Subject.Activity.mean</li>
+<li>tBodyAccJerk-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Gyro</p>
+
+<ul>
+<li>tBodyGyro-mean()-X.Subject.Activity.mean</li>
+<li>tBodyGyro-mean()-Y.Subject.Activity.mean</li>
+<li>tBodyGyro-mean()-Z.Subject.Activity.mean</li>
+<li>tBodyGyro-std()-X.Subject.Activity.mean</li>
+<li>tBodyGyro-std()-Y.Subject.Activity.mean</li>
+<li>tBodyGyro-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Gyro Jerk</p>
+
+<ul>
+<li>tBodyGyroJerk-mean()-X.Subject.Activity.mean</li>
+<li>tBodyGyroJerk-mean()-Y.Subject.Activity.mean</li>
+<li>tBodyGyroJerk-mean()-Z.Subject.Activity.mean</li>
+<li>tBodyGyroJerk-std()-X.Subject.Activity.mean</li>
+<li>tBodyGyroJerk-std()-Y.Subject.Activity.mean</li>
+<li>tBodyGyroJerk-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Acceleration Magnitude</p>
+
+<ul>
+<li>tBodyAccMag-mean().Subject.Activity.mean</li>
+<li>tBodyAccMag-std().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Gravity Acceleration Magnitude</p>
+
+<ul>
+<li>tGravityAccMag-mean().Subject.Activity.mean</li>
+<li>tGravityAccMag-std().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Acceleration Jerk Magnitude</p>
+
+<ul>
+<li>tBodyAccJerkMag-mean().Subject.Activity.mean</li>
+<li>tBodyAccJerkMag-std().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Gyroscope Magnitude</p>
+
+<ul>
+<li>tBodyGyroMag-mean().Subject.Activity.mean</li>
+<li>tBodyGyroMag-std().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Total Body Gyroscope Jerk Magnitude</p>
+
+<ul>
+<li>tBodyGyroJerkMag-mean().Subject.Activity.mean</li>
+<li>tBodyGyroJerkMag-std().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Body Acceleration</p>
+
+<ul>
+<li>fBodyAcc-mean()-X.Subject.Activity.mean</li>
+<li>fBodyAcc-mean()-Y.Subject.Activity.mean</li>
+<li>fBodyAcc-mean()-Z.Subject.Activity.mean</li>
+<li>fBodyAcc-std()-X.Subject.Activity.mean</li>
+<li>fBodyAcc-std()-Y.Subject.Activity.mean</li>
+<li>fBodyAcc-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Body Frequency</p>
+
+<ul>
+<li>fBodyAcc-meanFreq()-X.Subject.Activity.mean</li>
+<li>fBodyAcc-meanFreq()-Y.Subject.Activity.mean</li>
+<li>fBodyAcc-meanFreq()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Body Acceleration and Jerk</p>
+
+<ul>
+<li>fBodyAccJerk-mean()-X.Subject.Activity.mean</li>
+<li>fBodyAccJerk-mean()-Y.Subject.Activity.mean</li>
+<li>fBodyAccJerk-mean()-Z.Subject.Activity.mean</li>
+<li>fBodyAccJerk-std()-X.Subject.Activity.mean</li>
+<li>fBodyAccJerk-std()-Y.Subject.Activity.mean</li>
+<li>fBodyAccJerk-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Body Mean Frequency</p>
+
+<ul>
+<li>fBodyAccJerk-meanFreq()-X.Subject.Activity.mean</li>
+<li>fBodyAccJerk-meanFreq()-Y.Subject.Activity.mean</li>
+<li>fBodyAccJerk-meanFreq()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Gyroscope Information</p>
+
+<ul>
+<li>fBodyGyro-mean()-X.Subject.Activity.mean</li>
+<li>fBodyGyro-mean()-Y.Subject.Activity.mean</li>
+<li>fBodyGyro-mean()-Z.Subject.Activity.mean</li>
+<li>fBodyGyro-std()-X.Subject.Activity.mean</li>
+<li>fBodyGyro-std()-Y.Subject.Activity.mean</li>
+<li>fBodyGyro-std()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Gyroscope Frequency</p>
+
+<ul>
+<li>fBodyGyro-meanFreq()-X.Subject.Activity.mean</li>
+<li>fBodyGyro-meanFreq()-Y.Subject.Activity.mean</li>
+<li>fBodyGyro-meanFreq()-Z.Subject.Activity.mean</li>
+</ul></li>
+<li><p>Body Acceleration and Jek</p>
+
+<ul>
+<li>fBodyAccMag-mean().Subject.Activity.mean</li>
+<li>fBodyAccMag-std().Subject.Activity.mean</li>
+<li>fBodyAccMag-meanFreq().Subject.Activity.mean</li>
+<li>fBodyBodyAccJerkMag-mean().Subject.Activity.mean</li>
+<li>fBodyBodyAccJerkMag-std().Subject.Activity.mean</li>
+<li>fBodyBodyAccJerkMag-meanFreq().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Gyroscope Magnitude and Jerk</p>
+
+<ul>
+<li>fBodyBodyGyroMag-mean().Subject.Activity.mean</li>
+<li>fBodyBodyGyroMag-std().Subject.Activity.mean</li>
+<li>fBodyBodyGyroMag-meanFreq().Subject.Activity.mean</li>
+<li>fBodyBodyGyroJerkMag-mean().Subject.Activity.mean</li>
+<li>fBodyBodyGyroJerkMag-std().Subject.Activity.mean</li>
+<li>fBodyBodyGyroJerkMag-meanFreq().Subject.Activity.mean</li>
+</ul></li>
+<li><p>Angle Information</p>
+
+<ul>
+<li>angle(tBodyAccMean,gravity).Subject.Activity.mean</li>
+<li>angle(tBodyAccJerkMean),gravityMean).Subject.Activity.mean</li>
+<li>angle(tBodyGyroMean,gravityMean).Subject.Activity.mean</li>
+<li>angle(tBodyGyroJerkMean,gravityMean).Subject.Activity.mean</li>
+<li>angle(X,gravityMean).Subject.Activity.mean</li>
+<li>angle(Y,gravityMean).Subject.Activity.mean</li>
+<li>angle(Z,gravityMean).Subject.Activity.mean</li>
+</ul></li>
+</ul>
+
+</body>
+
+</html>
+
